@@ -1,6 +1,6 @@
 {
   "name": "koto-cash",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Koto library for Node",
   "main": "index.js",
   "scripts": {
