@@ -1,21 +1,21 @@
 {
-  "name": "zcash",
+  "name": "koto-cash",
   "version": "0.1.0",
-  "description": "zcash library for Node",
+  "description": "Koto library for Node",
   "main": "index.js",
   "scripts": {
     "test": "ava test/*.js --verbose"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/montyanderson/zcash.git"
+    "url": "git+git@github.com:kkosuge/koto-cash.git"
   },
-  "author": "",
+  "author": "kkosuge <root@kksg.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/montyanderson/zcash/issues"
+    "url": "https://github.com/kkosuge/koto-cash/issues"
   },
-  "homepage": "https://github.com/montyanderson/zcash#readme",
+  "homepage": "https://github.com/kkosuge/koto-cash",
   "devDependencies": {
     "ava": "^0.16.0"
   }
