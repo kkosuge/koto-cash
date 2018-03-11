@@ -1,9 +1,9 @@
-# zcash
+# KotoCash
 
 :dollar: Minimal [Koto](https://koto.cash/) library for Node.js
 
 ```
-npm install koto --save
+npm install koto-cash --save
 ```
 
 > Note: This library has been succeeded by the Zcash library [zcash](https://github.com/montyanderson/stdrpc).
@@ -55,7 +55,7 @@ The RPC port.
 Type: `number`
 
 ``` javascript
-const Koto = require("koto");
+const Koto = require("koto-cash");
 
 const rpc = new Koto({
   username: "__username__",
