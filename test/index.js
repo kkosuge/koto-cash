@@ -1,28 +1,38 @@
 import test from "ava";
-import Zcash from "../";
+import Koto from "../";
 
 let rpc;
 
-test.serial("Zcash.auto", t => {
-	rpc = Zcash.auto();
+test.serial("Koto.auto", t => {
+  rpc = Koto.auto();
 
-	t.true(rpc instanceof Zcash);
+  t.true(rpc instanceof Koto);
 });
 
-test("Zcash#z_getnewaddress", t => {
-	t.plan(1);
+test("Koto#getinfo", t => {
+  t.plan(1)
 
-	return rpc.z_getnewaddress()
-	.then(address => {
-		t.is(typeof address, "string");
-	});
+  return rpc.getinfo()
+  .then(info => {
+    const blocks = info.blocks;
+    t.is(typeof blocks, "number")
+  })
+})
+
+test("Koto#z_getnewaddress", t => {
+  t.plan(1);
+
+  return rpc.z_getnewaddress()
+  .then(address => {
+    t.is(typeof address, "string");
+  });
 });
 
-test("Zcash#z_listaddresses", t => {
-	t.plan(1);
+test("Koto#z_listaddresses", t => {
+  t.plan(1);
 
-	return rpc.z_listaddresses()
-	.then(addresses => {
-		t.true(addresses instanceof Array);
-	});
+  return rpc.z_listaddresses()
+  .then(addresses => {
+    t.true(addresses instanceof Array);
+  });
 });
