@@ -1,40 +1,30 @@
 # zcash
 
-:dollar: Minimal [Zcash](https://z.cash/) library for Node.js
-
-> Note: This library has been succeeded by the isomorphic library [stdrpc](https://github.com/montyanderson/stdrpc).
+:dollar: Minimal [Koto](https://koto.cash/) library for Node.js
 
 ```
-npm install zcash --save
+npm install koto --save
 ```
 
-## Features
-
-* A fast, concise codebase, with zero dependencies.
-* Supports all commands listed in the [zcash Payment API](https://github.com/zcash/zcash/blob/master/doc/payment-api.md).
-* Test suite!
-
-## To Do
-
-* Write a more full test suite.
+> Note: This library has been succeeded by the Zcash library [zcash](https://github.com/montyanderson/stdrpc).
 
 ## API
 
-### Zcash.auto()
+### Koto.auto()
 
-Returns a new `Zcash` instance, after reading the username and password from `HOME/.zcash/zcash.conf`. You can then use all the RPC commands as normal.
+Returns a new `Koto` instance, after reading the username and password from `HOME/.koto/koto.conf`. You can then use all the RPC commands as normal.
 
 ``` javascript
-const rpc = Zcash.auto();
+const rpc = Koto.auto();
 
 rpc.z_listaddresses().then(addresses => {
-	console.log(addresses);
+  console.log(addresses);
 });
 ```
 
-### new Zcash(options)
+### new Koto(options)
 
-Returns a new `Zcash` instances, with the specified options.
+Returns a new `Koto` instances, with the specified options.
 
 #### options
 
@@ -65,18 +55,18 @@ The RPC port.
 Type: `number`
 
 ``` javascript
-const Zcash = require("zcash");
+const Koto = require("koto");
 
-const rpc = new Zcash({
-	username: "__username__",
-	password: "__password__"
+const rpc = new Koto({
+  username: "__username__",
+  password: "__password__"
 });
 
 rpc.z_listaddresses().then(addresses => {
-	console.log(addresses);
+  console.log(addresses);
 });
 ```
 
 ``` javascript
-[ 'zcW36oxxUKViWZsFUb6SUDLr61b3N6EaY9oRt8zPYhxFAUGRwUNCLuGFfd2yxYrDgM5ouLkTDHMRdGNgVqJgriHncbjRedN' ]
+[ 'zkNZ2Ap2YTYejG4pHbWTzxUfMazgj8rMksrn5A7obLSokYSbVWYuptkkeBydLe9F1SUkZ4e4wpcrFdSKVV2uJYUtXafnLgP' ]
 ```
